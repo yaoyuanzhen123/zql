@@ -1,0 +1,26 @@
+server:
+  port: 9997
+
+spring:
+  application:
+    name: djp
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 20
+      max-idle: 10
+      max-wait: 1000
+      min-idle: 5
+    timeout: 5000
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9999/eureka/
